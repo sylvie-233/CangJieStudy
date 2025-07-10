@@ -1,6 +1,6 @@
 # 仓颉
 
-`跟我一起学“仓颉”编程语言: P10`
+`跟我一起学“仓颉”编程语言: P14`
 
 ## 基础介绍
 
@@ -138,6 +138,9 @@ var str: String = "xxx"
 var str = """
     多行字符串
 """
+
+// 模板字符串
+var str = "${x}"
 ```
 字符串
 
@@ -173,6 +176,10 @@ ControlFlow:
     import: # 
     let: # 变量定义，默认不可变变量
     package: # 模块定义
+    struct: # 结构体定义
+        this:
+        mut func:
+        static:
     var: # 可变变量定义
     do ... while:
     for in ...:
@@ -215,6 +222,16 @@ func add(a: Int64, b: Int64): Int64 {
 
 函数定义：`func`
 - 函数默认最后一行为返回值
+- 支持命名参数：`!:`
+- 支持参数默认值
+- 形参默认不可变
+- 函数内部还可定义函数
+
+
+
+#### Overload
+
+函数重载
 
 
 
@@ -223,6 +240,9 @@ func add(a: Int64, b: Int64): Int64 {
 struct Rectangle {
     let width: Int64
     let height: Int64
+
+    // 主构造函数
+    public Rectangle(let width: Int64, let height: Int64) {}
 
     public init(width: Int64, height: Int64) {
         this.width = width
@@ -234,6 +254,23 @@ struct Rectangle {
     }
 }
 ```
+
+结构体为值类型
+
+
+#### Contructor
+
+支持主构造函数、普通构造函数
+
+
+#### Static Prop & Func
+
+静态变量
+
+#### Mut Func
+
+方法类修改成员变量，该方法必须是mut可变方法
+
 
 
 ### 面向对象
