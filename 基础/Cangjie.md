@@ -1,6 +1,6 @@
 # 仓颉
 
-`跟我一起学“仓颉”编程语言: P14`
+`跟我一起学“仓颉”编程语言: P18`
 
 ## 基础介绍
 
@@ -74,8 +74,30 @@ std:
     collection:
         concurrent:
     console:
-    convert:
+    convert: # 类型转换
+        Parsable:
     core: # 语言核心包，自动引入
+        Rune:
+        String:
+            size: # 字节长度
+            contains():
+            count():
+            endsWith():
+            indexOf():
+            join():
+            lastIndexOf():
+            replace():
+            split():
+            startsWith():
+            toArray(): # 字节数组
+            toAsciiLower():
+            toAsciiTitle():
+            toAsciiUpper():
+            toRuneArray():
+            trimLeft():
+            trimRight():
+        StringBuilder:
+            append():    
         print():
         println():
     crypto:
@@ -86,21 +108,34 @@ std:
     deriving:
     env:
     fs:
+    format: # 格式化
+        Formatter:
     io:
-    math:
+    math: # 数学
+        abs():
+        ceil():
+        floor():
+        gcd():
+        lcm():
+        rand():
+        sqrt():
     net:
     objectpool:
     overflow:
     posix:
     process:
-    random:
+    random: # 随机数
+        Random:
+            nextBool():
+            nextFloat64():
+            nextInt8():
+            nextInt64():
     ref:
     reflect:
     regex:
     runtime:
     sort:
     sync: # 并发
-
     time:
     unicode:
     unittest: # 单元测试
@@ -277,9 +312,16 @@ struct Rectangle {
 
 
 
+访问控制：
+- private
+- default
+- protected
+- public
+
 
 
 ### 模块
+
 
 
 
